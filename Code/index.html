@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soccer Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Elite selection</h1>
+
+  <div id="product-grid"></div>
+
+  <!-- Dialog for adding products -->
+  <dialog id="addDialog">
+    <h2>Add Product</h2>
+    <input type="text" id="product-url" placeholder="Paste product link here" />
+    <div class="dialog-buttons">
+      <button id="fetch-product">Add</button>
+      <button id="close-dialog">Cancel</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

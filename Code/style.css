@@ -1,0 +1,151 @@
+/* === Grundlayout === */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d81a9d9, #ffffff);
+  background-attachment: fixed;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* === Produktgrid === */
+#product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 40px;
+}
+
+/* === Produktkachel === */
+.product {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  background: white;
+  border: 3px solid black; /* Neuer sichtbarer Rahmen */
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border-color: #333;
+}
+
+.product img.main-img {
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product p {
+  margin: 8px 0 0 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* === Team-Icon === */
+.team-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 2px solid #000;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.team-icon:hover {
+  transform: scale(1.1);
+}
+
+/* === Delete-Button === */
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  background: #1d81a9d9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgb(220, 20, 20);
+}
+
+/* === Plus-Kachel === */
+.add-tile {
+  width: 220px;
+  height: 260px;
+  border-radius: 14px;
+  background: white;
+  border: 2px dashed #aaa;
+  color: #333;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-tile:hover {
+  background: #f0f4ff;
+  border-color: #666;
+  transform: scale(1.05);
+}
+
+/* === Dialog === */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+dialog input {
+  width: 260px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-around;
+}
