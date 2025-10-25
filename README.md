@@ -13,3 +13,4 @@
 ## Ideas
  - Voting
 
+![Current state](State.png)
